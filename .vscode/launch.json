@@ -1,0 +1,48 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug (dtree)",
+            "cargo": {
+                "args": [
+                    "build"
+                ]
+            },
+            "program": "${workspaceFolder}/target/debug/dtree",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run (release)",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--release"
+                ]
+            },
+            "program": "${workspaceFolder}/target/release/dtree",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run with args",
+            "cargo": {
+                "args": [
+                    "build"
+                ]
+            },
+            "program": "${workspaceFolder}/target/debug/dtree",
+            "args": [
+                "demo"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}
